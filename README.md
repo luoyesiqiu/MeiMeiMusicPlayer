@@ -1,6 +1,6 @@
 # MeiMeiMusicPlayer
 
-![截图](/screenshot/screenshot.png)
+![截图](/Screenshot/screenshot.png)
 
 # 简介
 美美播放器，基于Androlua开发
@@ -11,7 +11,7 @@
 * 跳转到指定位置播放
 * 列表歌曲循环播放
 
-# summary
+# Summary
 MeimeiPlayer,development basing Androlua
 # MeimeiPlayer sending and dropping machine effect or less
 * Drawing hands Desk songs, Consolidated songs Song column list
