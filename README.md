@@ -1,6 +1,6 @@
 # MeiMeiMusicPlayer
 
-![截图](/Screenshot/screenshot.png)
+![截图](/screenshot/screenshot.png)
 
 # 简介
 美美播放器，基于Androlua开发
