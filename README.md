@@ -1,9 +1,12 @@
 # MeiMeiMusicPlayer
 
-![截图](/screenshot/screenshot.png)
 
 # 简介
 美美播放器，基于Androlua开发
+
+
+![截图](/screenshot/screenshot.png)
+
 ## 美美播放器实现以下功能
 * 扫描手机上的歌曲，并保存为歌曲列表
 * 播放列表中的歌曲
