@@ -2,7 +2,7 @@
 
 
 # 简介
-美美播放器，基于Androlua开发
+美美音乐播放器，基于Androlua开发
 
 
 ![截图](/screenshot/screenshot.png)
