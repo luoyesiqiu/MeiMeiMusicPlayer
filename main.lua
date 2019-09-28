@@ -39,8 +39,8 @@ function play(mp,path)
 end
 --更新内容
 function updateProgress(path)
-   pd.setMessage(path)
-  end
+  pd.setMessage(path)
+end
 --回调函数，获取某文件夹下所有mp3文件完成时被调用
 function getListFinish()
   writeFile(listpath,arr)
@@ -55,38 +55,38 @@ function getFiles(arr,path)
   import "java.util.*"
   import "java.io.*"
   local queue=LinkedList()--模拟一个队列
-    local f=File(path)
-    local  ls=f.listFiles()
-    for i=0,#ls-1 do
-      local t=ls[i]
-      local name=t.getName();
-      if t.isDirectory() then--是文件夹
-       queue.addLast(t)
-      else
-       if string.find(string.lower(name),"%.mp3$") and t.length()>1024*1024*2 then
-         arr.add(t)
-         end--if
+  local f=File(path)
+  local ls=f.listFiles()
+  for i=0,#ls-1 do
+    local t=ls[i]
+    local name=t.getName();
+    if t.isDirectory() then--是文件夹
+      queue.addLast(t)
+     else
+      if string.find(string.lower(name),"%.mp3$") and t.length()>1024*1024*2 then
+        arr.add(t)
       end--if
-      end--for
-    while(queue.isEmpty()==false) do
-   local dirtemp= queue.removeFirst()
-  
-   call("updateProgress","已扫描到"..arr.size().."个mp3文件\n"..dirtemp.getPath())
-   local  listtemp=dirtemp.listFiles()
+    end--if
+  end--for
+  while(queue.isEmpty()==false) do
+    local dirtemp= queue.removeFirst()
+
+    call("updateProgress","已扫描到"..arr.size().."个mp3文件\n"..dirtemp.getPath())
+    local listtemp=dirtemp.listFiles()
     for i=0,#listtemp-1 do
       local t=listtemp[i]
       local name=t.getName();
       if t.isDirectory() then--是文件夹
-       queue.addLast(t)
-      else
-       if string.find(string.lower(name),"%.mp3$") and t.length()>1024*1024*2 then
-         arr.add(t)
-         end--if
+        queue.addLast(t)
+       else
+        if string.find(string.lower(name),"%.mp3$") and t.length()>1024*1024*2 then
+          arr.add(t)
+        end--if
       end--if
-      end--for
-    end--while
-    call("getListFinish")
-    end --getFiles
+    end--for
+  end--while
+  call("getListFinish")
+end --getFiles
 
 
 --获取某文件夹下所有mp3文件。并存在arr中
@@ -119,7 +119,7 @@ function readFile(path)
   local br=BufferedReader(fr)
   local ch=0
   while(br.read()~=-1 )
-  do
+    do
     al.add(br.readLine())
   end
   br.close()
@@ -190,10 +190,10 @@ end
 ------全局代码------
 if tf.exists()==false then--文件列表不存在
   showEditDialog("初次使用软件，设置扫描音乐的路径")
-else
- arr= readFile(listpath)
+ else
+  arr= readFile(listpath)
 end
-----------------------------
+--------------------
 
 --实时更新进度条和时间显示
 function updateTime(m,s)
@@ -233,7 +233,7 @@ function on_next(v)
       play(mp,arr.get(0))
       local tt=string.gsub(File(arr.get(0)).getName(),".mp3$","")--偷懒一下
       tv_title.setText(tt)
-    else
+     else
       curIdx=curIdx+1
       play(mp,arr.get(curIdx))
       local tt=string.gsub(File(arr.get(curIdx)).getName(),".mp3$","")--偷懒一下
@@ -304,7 +304,7 @@ function on_pause(v)
     if(t~=nil) then
       t.Enabled=false
     end
-  else
+   else
     if(t~=nil) then--如果为空那就是播放完了的情况
       mp.start()
       bn_pause.setText("■")
@@ -319,11 +319,11 @@ function on_playlist(v)
   local isExist= f.exists()
   if(isExist==true) then
     showList(listpath,mp)
-  else
+   else
     print("列表文件不存在，请重新获取")
-    end
   end
-  
+end
+
 function on_Menu(v)
   local items={"更新列表","关于","退出"}
   local ad= AlertDialog.Builder(activity)
@@ -333,9 +333,9 @@ function on_Menu(v)
     onClick=function(dialog,which)
       if which==0 then
         showEditDialog("输入路径以重新扫描")
-      elseif which==1 then
-        print("落叶似秋制作，无版权，修改请注明原作者\n20170316更新：优化文件扫描器，更快速的扫描")
-      elseif which==2 then
+       elseif which==1 then
+        print("落叶似秋制作，无版权，修改请注明原作者\n\n* 20170316更新：优化文件扫描器，更快速的扫描")
+       elseif which==2 then
         if t~=nil then
           t.stop()
         end
