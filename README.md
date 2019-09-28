@@ -1,15 +1,14 @@
 # MeiMeiMusicPlayer
 
 
-# ¼ò½é
-ÃÀÃÀÒôÀÖ²¥·ÅÆ÷£¬»ùÓÚAndrolua¿ª·¢
+# ç®€ä»‹
+ç¾Žç¾ŽéŸ³ä¹æ’­æ”¾å™¨ï¼ŒåŸºäºŽAndroluaå¼€å‘
 
+<img src="/screenshot/screenshot.png" height="960" width="540" />
 
-![½ØÍ¼](/screenshot/screenshot.png)
-
-## ÃÀÃÀ²¥·ÅÆ÷ÊµÏÖÒÔÏÂ¹¦ÄÜ
-* É¨ÃèÊÖ»úÉÏµÄ¸èÇú£¬²¢±£´æÎª¸èÇúÁÐ±í
-* ²¥·ÅÁÐ±íÖÐµÄ¸èÇú
-* ÏÔÊ¾²¥·Å½ø¶È
-* Ìø×ªµ½Ö¸¶¨Î»ÖÃ²¥·Å
-* ÁÐ±í¸èÇúÑ­»·²¥·Å
+## ç¾Žç¾Žæ’­æ”¾å™¨å®žçŽ°ä»¥ä¸‹åŠŸèƒ½
+* æ‰«ææ‰‹æœºä¸Šçš„æ­Œæ›²ï¼Œå¹¶ä¿å­˜ä¸ºæ­Œæ›²åˆ—è¡¨
+* æ’­æ”¾åˆ—è¡¨ä¸­çš„æ­Œæ›²
+* æ˜¾ç¤ºæ’­æ”¾è¿›åº¦
+* è·³è½¬åˆ°æŒ‡å®šä½ç½®æ’­æ”¾
+* åˆ—è¡¨æ­Œæ›²å¾ªçŽ¯æ’­æ”¾
